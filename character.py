@@ -1,5 +1,4 @@
 class Character:
-
     _edited = None
     _name = None
     _created = None
@@ -11,7 +10,8 @@ class Character:
     _homeworld = None
     _birth_year = None
 
-    def __int__(self, edited, name, created, gender, skin_color, hair_color, height, eye_color, mass, homeworld, birth_year):
+    def __init__(self, edited, name, created, gender, skin_color, hair_color, height, eye_color, mass,
+                homeworld, birth_year):
         self._edited = edited
         self._name = name
         self._created = created
@@ -26,7 +26,7 @@ class Character:
 
     @property
     def name(self):
-        return f"Name: {self._name}"
+        return self._name
 
     @name.setter
     def name(self, new_name):
@@ -34,7 +34,7 @@ class Character:
 
     @property
     def gender(self):
-        return f"Gender: {self._gender}"
+        return self._gender
 
     @gender.setter
     def gender(self, new_gender):
@@ -42,7 +42,7 @@ class Character:
 
     @property
     def homeworld(self):
-        return f"Homeworld: {self._homeworld}"
+        return self._homeworld
 
     @homeworld.setter
     def homeworld(self, new_homeworld):
@@ -50,9 +50,8 @@ class Character:
 
     @property
     def birth_year(self):
-        return f"Birth Year: {self._birth_year}"
+        return self._birth_year
 
     @birth_year.setter
     def birth_year(self, new_birth_year):
         self._birth_year = new_birth_year
-
